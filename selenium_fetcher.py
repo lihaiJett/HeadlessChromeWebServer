@@ -56,10 +56,10 @@ def handle_post():
             driver.get('https://ancient.fenbi.com/xingce')
             driver.find_element_by_css_selector("[class='btn btn-primary select-csk']").click()
             sleep(1)
-            driver.find_element_by_css_selector(".sprite.sprite-expand.i-20").click()
+            driver.find_elements_by_css_selector("[class='sprite sprite-expand i-20']")[7].click()
             sleep(1)
             for a in driver.find_elements_by_css_selector("[class='btn btn-round create-exercise']"):
-                if '13842' == a.get_attribute("data-keypoint-id"):
+                if '13849' == a.get_attribute("data-keypoint-id"):
                     print(a.get_attribute("data-keypoint-id"))
                     a.click()
                     break

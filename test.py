@@ -34,10 +34,10 @@ for cookie in listCookies:
 browser.get('https://ancient.fenbi.com/xingce')
 browser.find_element_by_css_selector("[class='btn btn-primary select-csk']").click()
 sleep(1)
-browser.find_element_by_css_selector(".sprite.sprite-expand.i-20").click()
+browser.find_elements_by_css_selector("[class='sprite sprite-expand i-20']")[7].click()
 sleep(1)
 for a in browser.find_elements_by_css_selector("[class='btn btn-round create-exercise']"):
-    if '13842' == a.get_attribute("data-keypoint-id"):
+    if '13849' == a.get_attribute("data-keypoint-id"):
         print(a.get_attribute("data-keypoint-id"))
         a.click()
         break
